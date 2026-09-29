@@ -1,0 +1,6 @@
+@MobileMoneyAggregator_HostAddress = http://localhost:5063
+
+GET {{MobileMoneyAggregator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
