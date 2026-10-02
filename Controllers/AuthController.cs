@@ -1,4 +1,6 @@
 using System.Linq.Expressions;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -71,6 +73,16 @@ public class AuthController : ControllerBase
 };
 
 return Ok(response);
+    }
+    [Authorize]
+    [HttpGet("me")]
+    public IActionResult me()
+    {
+        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+        return Ok(new
+        {
+            message = $"Vous etes connecté en tant que {email}"
+        });
     }
     
 } 
