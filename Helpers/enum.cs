@@ -1,4 +1,4 @@
-namespace MobileMoneyAggregator.Helpers;
+namespace MobileMoneyAgregator.Helpers;
 public enum Provider
 {
     Mtn,
