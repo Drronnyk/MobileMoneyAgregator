@@ -1,10 +1,10 @@
 namespace MobileMoneyAgregator.Helpers;
-public enum Provider
+public enum EnumProvider
 {
     Mtn,
     Orange,
 }
-public enum Status
+public enum StatusTransaction
 {
     Success,
     Pending,

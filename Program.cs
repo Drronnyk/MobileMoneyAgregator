@@ -13,6 +13,10 @@ builder.Services.AddDbContext<AppDbContext>(
 );
 builder.Services.AddControllers();
 builder.Services.AddScoped<JwtService>();
+builder.Services.AddScoped<PaymentService>();
+builder.Services.AddScoped<FakeMtnProvider>();
+builder.Services.AddScoped<FakeOrangeProvider>();
+
 builder.Services.AddOpenApi();
 builder.Services.AddAuthentication(options =>
 {
